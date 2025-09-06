@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-PHANTOM_ARCH="${PHANTOM_ARCH:-x64}"
 export IFS=";"
 for servadd in ${SERVER}; do
-  command=("./phantom-linux-${PHANTOM_ARCH} -server $servadd")
+  command=("./phantom-linux -server $servadd")
   if [[ -v IPV6 ]] && [ "$IPV6" == "1" ]; then
     command+=("-6")
   fi
