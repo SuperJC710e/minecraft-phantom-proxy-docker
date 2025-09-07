@@ -19,7 +19,8 @@ RUN apk add --no-cache bash tini ca-certificates && \
     && chmod +x phantom-linux \
     && addgroup -g 1001 -S phantom \
     && adduser -u 1001 -S phantom -G phantom \
-    && mkdir -p /app && chown phantom:phantom /app
+    && mkdir -p /app && chown phantom:phantom /app \
+    && mv phantom-linux /app/phantom-linux
 
 USER phantom
 
