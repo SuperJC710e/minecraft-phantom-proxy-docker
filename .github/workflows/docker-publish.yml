@@ -8,7 +8,7 @@ name: "Docker Build: Minecraft Phantom Proxy"
 on:
   workflow_dispatch:
   schedule:
-    - cron: '40 14 * * *'
+    - cron: '40 14 * * 0'
   push:
     branches: [ "main", "master" ]
     # Publish semver tags as releases.
@@ -81,7 +81,7 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
             type=raw,value=latest,enable={{is_default_branch}}
-            type=schedule,pattern=nightly
+            type=schedule,pattern=weekly
           labels: |
             org.opencontainers.image.authors=SuperJC710E
             org.opencontainers.image.licenses=MIT
