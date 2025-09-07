@@ -1,7 +1,7 @@
 name: minecraft-phantom-proxy
 services:
   minecraft-phantom-proxy:
-    image: ghcr.ip/superjc710e/minecraft-phantom-proxy:latest
+    image: ghcr.io/superjc710e/minecraft-phantom-proxy:latest
     container_name: minecraft-phantom-proxy
     restart: always
     environment:
