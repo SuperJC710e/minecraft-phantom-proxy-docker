@@ -7,19 +7,19 @@ As described by jhead:
 
 ## Basic usage:
 ```bash
-docker container run --name minecraft-phantom-proxy -e SERVER=<server_ip>:<server_port> -e PHANTOM_ARCH=x64 -e PHANTOM_VER=latest --network host alexisspencer/minecraft-phantom-proxy:latest
+docker container run --name minecraft-phantom-proxy -e SERVER=<server_ip>:<server_port> -e PHANTOM_ARCH=x64 -e PHANTOM_VER=latestpre --network host ghcr.io/superjc710e/minecraft-phantom-proxy:latest
 ```
 Or with docker compose:
 ```bash
-version: '3.6'
+name: minecraft-phantom-proxy
 services:
   minecraft-phantom-proxy:
     image: alexisspencer/minecraft-phantom-proxy:latest
     container_name: minecraft-phantom-proxy
     environment:
       - SERVER=example.com:19132
-      - PHANTOM_ARCH=x64
-      - PHANTOM_VER=latest
+      # - PHANTOM_ARCH=x64
+      # - PHANTOM_VER=latestpre
       # - BIND_PORT=0
       # - BIND_IP=0.0.0.0
       # - TIMEOUT=60
