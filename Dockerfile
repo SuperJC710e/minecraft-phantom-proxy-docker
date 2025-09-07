@@ -17,7 +17,7 @@ RUN apk add --no-cache bash tini ca-certificates && \
     esac \
     && wget -q "${PHANTOM_SOURCE_URL}/v${PHANTOM_VERSION}/phantom-linux${BINARY_SUFFIX}" -O phantom-linux \
     && chmod +x phantom-linux \
-    && addgroup -g 1001 -S phantom && \
+    && addgroup -g 1001 -S phantom \
     && adduser -u 1001 -S phantom -G phantom \
     && mkdir -p /app && chown phantom:phantom /app
 
