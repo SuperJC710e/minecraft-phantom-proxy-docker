@@ -29,11 +29,9 @@ WORKDIR /app
 
 COPY --chmod=755 --chown=phantom:phantom entrypoint.sh .
 
-ENV SERVER=unknown \
-    PHANTOM_VER=latestpre \
-    PHANTOM_ARCH=amd64
+ENV SERVER=unknown
 
-LABEL maintainer="superman.jason@gmail.com" \
+LABEL maintainer="SuperJC710e" \
       version="${PHANTOM_VERSION}" \
       description="Makes hosted Bedrock/MCPE servers show up as LAN servers by using phantom"
 

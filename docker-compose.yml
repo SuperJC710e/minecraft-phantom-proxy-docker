@@ -1,12 +1,11 @@
 name: minecraft-phantom-proxy
 services:
   minecraft-phantom-proxy:
-    image: alexisspencer/minecraft-phantom-proxy:latest
+    image: ghcr.ip/superjc710e/minecraft-phantom-proxy:latest
     container_name: minecraft-phantom-proxy
+    restart: always
     environment:
       - SERVER=example.com:19132
-      - PHANTOM_ARCH=x64
-      - PHANTOM_VER=latest
       # - BIND_PORT=0
       # - BIND_IP=0.0.0.0
       # - TIMEOUT=60

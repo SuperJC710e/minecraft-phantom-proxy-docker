@@ -7,19 +7,18 @@ As described by jhead:
 
 ## Basic usage:
 ```bash
-docker container run --name minecraft-phantom-proxy -e SERVER=<server_ip>:<server_port> -e PHANTOM_ARCH=x64 -e PHANTOM_VER=latestpre --network host ghcr.io/superjc710e/minecraft-phantom-proxy:latest
+docker container run --name minecraft-phantom-proxy -e SERVER=<server_ip>:<server_port> --network host ghcr.io/superjc710e/minecraft-phantom-proxy:latest
 ```
 Or with docker compose:
 ```bash
 name: minecraft-phantom-proxy
 services:
   minecraft-phantom-proxy:
-    image: alexisspencer/minecraft-phantom-proxy:latest
+    image: ghcr.io/superjc710e/minecraft-phantom-proxy:latest
     container_name: minecraft-phantom-proxy
+    restart: always
     environment:
       - SERVER=example.com:19132
-      # - PHANTOM_ARCH=x64
-      # - PHANTOM_VER=latestpre
       # - BIND_PORT=0
       # - BIND_IP=0.0.0.0
       # - TIMEOUT=60
@@ -35,8 +34,6 @@ services:
 | Variable     | Required   | Description                                                                                                                                                                                                                                                                                          |
 |--------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | SERVER       | Required   | Bedrock/MCPE server address and the port.  Multiple servers can be specified by separating them with `;`  Example: `SERVER=192.168.1.5:19132;play.minecraftworld.com:19132`                                                                                                                          |
-| PHANTOM_ARCH | *Optional* | CPU architecture where Phantom is being run.  Available Options: `x86`, `x64`, `arm5`, `arm6`, `arm7`, `arm8`  Default: `PHANTOM_ARCH=x64`                                                                                                                                                           |
-| PHANTOM_VER  | *Optional* | Specifies the version of Phantom to run.  Use `latest` for the latest stable version, `latestpre` for the latest pre-release. Other available versions can be found at [jhead's GitHub](https://github.com/jhead/phantom/releases)  Example: `PHANTOM_VER=0.5.4`, Defaults to latest stable release. |
 | IPV6         | *Optional* | Enables IPv6 support on port 19133. (experimental)  Pass `1` to enable this flag!  Example: `IPV6=1`                                                                                                                                                                                                 |
 | BIND_IP      | *Optional* | IP address to listen on. Defaults to all interfaces.  **NB:** BIND_IP cannot be used when multiple servers are specified in SERVER.  default: `BIND_IP=0.0.0.0`                                                                                                                                      |
 | BIND_PORT    | *Optional* | Port to listen on. Defaults to 0, which selects a random port.  **NB:** BIND_PORT cannot be used when multiple servers are specified in SERVER.  Example: `BIND_PORT=19133`                                                                                                                          |
