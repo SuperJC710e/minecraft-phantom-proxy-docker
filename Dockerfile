@@ -31,8 +31,8 @@ COPY --chmod=755 --chown=phantom:phantom entrypoint.sh .
 
 ENV SERVER=unknown
 
-LABEL maintainer="SuperJC710e" \
-      version="${PHANTOM_VERSION}" \
-      description="Makes hosted Bedrock/MCPE servers show up as LAN servers by using phantom"
+LABEL org.opencontainers.image.description="Makes hosted Bedrock/MCPE servers show up as LAN servers by using phantom" \
+      org.opencontainers.image.version="${PHANTOM_VERSION}" \
+      org.opencontainers.image.authors="SuperJC710e"
 
 ENTRYPOINT ["/sbin/tini", "--", "/app/entrypoint.sh"]
