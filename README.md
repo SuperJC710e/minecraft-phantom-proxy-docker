@@ -6,10 +6,13 @@ As described by jhead:
 >It's like having a LAN server that's not actually there, spooky.
 
 ## Basic usage:
+
 ```bash
 docker container run --name minecraft-phantom-proxy -e SERVER=<server_ip>:<server_port> --network host ghcr.io/superjc710e/minecraft-phantom-proxy:latest
 ```
+
 Or with docker compose:
+
 ```bash
 name: minecraft-phantom-proxy
 services:
@@ -44,11 +47,11 @@ services:
 
 *Note: host network mode required.*
 
-[GitHub](https://github.com/alexisspencer/Minecraft-Phantom-Proxy-Docker) |
-[Docker Hub](https://hub.docker.com/r/alexisspencer/minecraft-phantom-proxy)
+[GitHub](https://github.com/SuperJC710e/minecraft-phantom-proxy-docker) |
+[GitHub Container Registry](https://github.com/SuperJC710e/minecraft-phantom-proxy-docker/pkgs/container/minecraft-phantom-proxy)
 
-Phantom written by jhead: [GitHub](https://github.com/jhead/phantom)
+Phantom written by Justin Head: [GitHub](https://github.com/jhead/phantom)
 
 Docker image based on original image created by nkelemen18: [GitHub](https://github.com/nkelemen18/Minecraft-Phantom-Proxy-Docker) and adapted by Kirbo: [GitHub](https://github.com/Kirbo/Minecraft-Phantom-Proxy-Docker) and then further adapted by Lexi: [GitHub](https://github.com/lexiismadd/Minecraft-Phantom-Proxy-Docker) which used lastversion by dvershinin to extrapolate latest version of a github release: [GitHub](https://github.com/dvershinin/lastversion) in the entrypoint.sh script
 
-This version reverts to building the current latest version of phantom into the image, instead of pulling it at every startup.
+This version reverts to building the current latest version of `phantom` into the image, instead of pulling it at every startup.

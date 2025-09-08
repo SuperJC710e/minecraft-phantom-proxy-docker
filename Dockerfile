@@ -1,5 +1,7 @@
 # syntax=docker/dockerfile:1
-FROM alpine:3.22
+ARG ALPINE_VERSION=3.22
+
+FROM alpine:${ALPINE_VERSION}
 
 ARG PHANTOM_SOURCE_URL="https://github.com/jhead/phantom/releases/download"
 ARG PHANTOM_VERSION=0.5.4

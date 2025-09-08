@@ -23,7 +23,6 @@ env:
   # IMAGE_NAME: ${{ github.repository }}
   IMAGE_NAME: superjc710e/minecraft-phantom-proxy
 
-
 jobs:
   build:
 
