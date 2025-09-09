@@ -1,6 +1,6 @@
-# Docker image for jhead's Phantom proxy
+# Docker Image for Justin Head's Phantom Proxy
 
-As described by jhead:
+As described by Justin Head:
 >Makes hosted Bedrock/MCPE servers show up as LAN servers, specifically for consoles.
 >You can now play on remote servers (not Realms!) on your Xbox and PS4 with friends.
 >It's like having a LAN server that's not actually there, spooky.
